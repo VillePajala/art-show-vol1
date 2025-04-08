@@ -14,20 +14,20 @@
 - [x] Define data structure for artworks (e.g., `artworks.json` or JS module)
 - [x] Create gallery page (`/gallery`)
 - [x] Fetch and display artworks as a vertical list (titles/thumbnails)
-- [ ] Add hover effects/animations to gallery items
-- [ ] Implement navigation from landing page to gallery view
+- [x] Add hover effects/animations to gallery items
+- [x] Implement navigation from landing page to gallery view
 
 ## Phase 3: Artwork Viewer
 *Relevant Docs: [`SRS_art_gallery.md`](.documentation/SRS_art_gallery.md), [`UID_art_gallery.md`](.documentation/UID_art_gallery.md), [`PRD_art_gallery.md`](.documentation/PRD_art_gallery.md)*
 
-- [ ] Create dynamic route for individual artworks (`/artwork/[slug]`)
-- [ ] Implement Artwork Viewer component
-- [ ] Load and render placeholder/sample artwork code (e.g., simple Canvas animation)
-- [ ] Implement fullscreen mode for artwork viewer
-- [ ] Add minimal UI overlay (Description, Navigation, Return)
+- [x] Create dynamic route for individual artworks (`/artwork/[slug]`)
+- [x] Implement Artwork Viewer component
+- [x] Load and render placeholder/sample artwork code (e.g., simple Canvas animation)
+- [x] Implement fullscreen mode for artwork viewer
+- [x] Add minimal UI overlay (Description, Navigation, Return)
 - [ ] Implement description toggle/display logic
-- [ ] Implement "Previous" and "Next" navigation between artworks
-- [ ] Implement return to gallery functionality (e.g., Escape key or button)
+- [x] Implement "Previous" and "Next" navigation between artworks
+- [x] Implement return to gallery functionality (e.g., Escape key or button)
 - [ ] Handle artwork-specific interactions (mouse/keyboard input)
 
 ## Phase 4: Styling & Polish
