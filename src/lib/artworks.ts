@@ -8,16 +8,20 @@ export interface Artwork {
 }
 
 export const artworks: Artwork[] = [
-  // Example artwork - replace with real ones later
   {
     slug: "spinning-cubes",
-    title: "Spinning Cubes",
-    description: "A simple animation of rotating cubes using Three.js.",
+    title: "Deformed Reality",
+    description: "A 3D shape continuously deformed and colored by noise shaders.",
   },
   {
     slug: "particle-flow",
     title: "Particle Flow",
-    description: "Generative particles flowing across the screen.",
+    description: "Generative particles connecting and reacting to the mouse.",
+  },
+  {
+    slug: "moire-pattern",
+    title: "Moire Pattern",
+    description: "Overlapping rotating lines creating shifting moire patterns.",
   },
   // Add more artworks here...
 ]; 
