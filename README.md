@@ -1,59 +1,36 @@
-# Code Art Exhibition
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-A minimalist, web-based solo art exhibition showcasing generative artwork created entirely with code. Each piece runs directly in the user's browser and is meant to be experienced interactively and fullscreen, emphasizing the aesthetics of computation and live execution.
+## Getting Started
 
-## About
-
-This project is a digital art gallery that displays generative artwork created with code. The artworks are self-contained code components rendered in the browser, offering an immersive, fullscreen experience for each piece.
-
-## Features
-
-- Single-page web application with dynamic routing for each artwork
-- Artworks execute live in the browser
-- Fullscreen, immersive experience per artwork
-- Scroll-based or click-based navigation between artworks
-- Brief descriptions for each piece
-- Minimal UI to maintain focus on the artwork
-
-## Technical Stack
-
-- Next.js framework
-- React
-- TypeScript
-- Tailwind CSS
-- HTML Canvas for rendering artworks
-- Deployed on Vercel
-
-## Installation
+First, run the development server:
 
 ```bash
-# Clone the repository
-git clone https://github.com/VillePajala/art-show-vol1.git
-
-# Navigate to project directory
-cd art-show-vol1
-
-# Install dependencies
-npm install
-
-# Run the development server
 npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the exhibition.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## Project Structure
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-- `/app`: Main application pages
-- `/app/artwork/[slug]`: Dynamic routes for individual artworks
-- `/components`: Reusable React components
-- `/artworks`: Individual artwork components and their configurations
-- `/styles`: CSS styling
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Target Audience
+## Learn More
 
-Art enthusiasts, digital art lovers, creative coders, and curious web users who are interested in the intersection of art and code.
+To learn more about Next.js, take a look at the following resources:
 
-## License
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-MIT
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+
+## Deploy on Vercel
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
