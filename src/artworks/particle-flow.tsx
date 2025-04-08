@@ -3,10 +3,10 @@
 import React from 'react';
 
 export default function ParticleFlow() {
-  // Placeholder - Replace with actual Canvas/WebGL later
+  // Placeholder - Remove fixed size, fill container
   return (
-    <div className="w-64 h-64 bg-green-900 flex items-center justify-center text-white">
-      Particle Flow Placeholder
+    <div className="w-full h-full bg-green-900 flex items-center justify-center text-white p-4">
+      Particle Flow Placeholder (Should Fill Container)
     </div>
   );
 } 

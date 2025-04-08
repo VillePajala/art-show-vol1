@@ -8,17 +8,18 @@ export default function GalleryPage() {
         Gallery
       </h1>
 
-      <div className="flex flex-col items-center space-y-6 w-full max-w-md">
+      <ul className="flex flex-col items-center space-y-6 w-full max-w-md list-none p-0">
         {artworks.map((artwork) => (
-          <Link
-            key={artwork.slug}
-            href={`/artwork/${artwork.slug}`}
-            className="block w-full text-center text-xl font-sans text-gray-300 hover:text-white hover:bg-gray-800 transition-colors duration-200 py-4 rounded-md"
-          >
-            {artwork.title}
-          </Link>
+          <li key={artwork.slug} className="w-full">
+            <Link
+              href={`/artwork/${artwork.slug}`}
+              className="block w-full text-center text-xl font-sans text-gray-300 hover:text-white hover:bg-gray-800 transition-colors duration-200 py-4 rounded-md"
+            >
+              {artwork.title}
+            </Link>
+          </li>
         ))}
-      </div>
+      </ul>
 
       <div className="mt-auto pt-12 text-center">
         <Link href="/" className="text-gray-400 hover:text-white font-sans">

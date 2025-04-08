@@ -37,14 +37,20 @@ export default function ArtworkPage({ params }: ArtworkPageProps) {
   const nextArtwork = artworks[currentIndex + 1]; // Will be undefined if it's the last artwork
 
   return (
-    // Removed padding, added bg-black to make it fullscreen dark
-    <div className="min-h-screen flex flex-col items-center bg-black">
-      {/* Artwork Viewer takes up the entire screen */}
-      <div className="flex-grow w-full h-full flex items-center justify-center">
+    // Main container: Re-add justify-center to vertically center the aspect box
+    <div className="min-h-screen flex flex-col items-center justify-center bg-black p-4 sm:p-8">
+      {/* 
+        Viewer Container:
+        - w-full: Takes width available in centered parent.
+        - max-w-5xl: Limits maximum width.
+        - aspect-square: Forces height to match width (can change ratio e.g., aspect-[3/4])
+      */}
+      <div className="w-full max-w-5xl aspect-square">
+        {/* ArtworkViewer should fill this aspect-ratio container */}
         <ArtworkViewer
           slug={slug}
           description={artwork.description}
-          title={artwork.title} // Pass title as well for the overlay
+          title={artwork.title}
           prevSlug={prevArtwork?.slug}
           nextSlug={nextArtwork?.slug}
         />

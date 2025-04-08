@@ -59,8 +59,11 @@ export default function ArtworkViewer({
       {/* Render the dynamically loaded component */}      
       <ArtworkComponent />
 
-      {/* Overlay container - adjust padding for smaller screens */}
-      <div className={`absolute inset-0 flex items-center justify-between p-2 sm:p-4 transition-opacity duration-300 ${isOverlayVisible ? 'opacity-70' : 'opacity-0'} hover:opacity-100`}>
+      {/* Overlay container - Use group-hover to control visibility */}
+      {/* Start with opacity-0, fade in on group-hover */}
+      <div 
+        className={`absolute inset-0 flex items-center justify-between p-2 sm:p-4 transition-opacity duration-300 opacity-0 group-hover:opacity-70 hover:!opacity-100`} // Control visibility with group-hover, force opacity 100 when hovering overlay itself
+      >
 
         {/* Back to Gallery Link (Top Left) - adjust padding/text size */}
         <Link
@@ -77,6 +80,7 @@ export default function ArtworkViewer({
             href={`/artwork/${prevSlug}`}
             className="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 bg-gray-700 hover:bg-gray-600 text-white p-1 sm:p-2 rounded-full z-10 font-sans"
             title="Previous Artwork"
+            aria-label="Previous Artwork"
           >
             &lt;
           </Link>
@@ -88,6 +92,7 @@ export default function ArtworkViewer({
             href={`/artwork/${nextSlug}`}
             className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 bg-gray-700 hover:bg-gray-600 text-white p-1 sm:p-2 rounded-full z-10 font-sans"
             title="Next Artwork"
+            aria-label="Next Artwork"
           >
             &gt;
           </Link>
