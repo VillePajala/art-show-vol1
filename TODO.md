@@ -33,9 +33,9 @@
 ## Phase 4: Styling & Polish
 *Relevant Docs: [`UID_art_gallery.md`](.documentation/UID_art_gallery.md)*
 
-- [ ] Apply visual design elements (dark theme, typography, transitions) based on UID
-- [ ] Ensure responsive design for mobile and desktop
-- [ ] Implement smooth page/component transitions (e.g., curtain reveal)
+- [x] Apply visual design elements (dark theme, typography, transitions) based on UID
+- [x] Ensure responsive design for mobile and desktop
+- [ ] Implement smooth page/component transitions (e.g., curtain reveal) # DEFERRED
 
 ## Phase 5: Accessibility & Deployment
 *Relevant Docs: [`UID_art_gallery.md`](.documentation/UID_art_gallery.md), [`SRS_art_gallery.md`](.documentation/SRS_art_gallery.md)*

@@ -59,50 +59,50 @@ export default function ArtworkViewer({
       {/* Render the dynamically loaded component */}      
       <ArtworkComponent />
 
-      {/* Overlay container - visible on hover */}
-      <div className={`absolute inset-0 flex items-center justify-between p-4 transition-opacity duration-300 ${isOverlayVisible ? 'opacity-70' : 'opacity-0'} hover:opacity-100`}>
+      {/* Overlay container - adjust padding for smaller screens */}
+      <div className={`absolute inset-0 flex items-center justify-between p-2 sm:p-4 transition-opacity duration-300 ${isOverlayVisible ? 'opacity-70' : 'opacity-0'} hover:opacity-100`}>
 
-        {/* Back to Gallery Link (Top Left) */}
-        <Link 
+        {/* Back to Gallery Link (Top Left) - adjust padding/text size */}
+        <Link
           href="/gallery"
-          className="absolute top-4 left-4 bg-gray-700 hover:bg-gray-600 text-white px-3 py-1 rounded text-sm z-10"
+          className="absolute top-2 left-2 sm:top-4 sm:left-4 bg-gray-700 hover:bg-gray-600 text-white px-2 py-1 sm:px-3 sm:py-1 rounded text-xs sm:text-sm z-10 font-sans"
           title="Back to Gallery"
         >
           &larr; Gallery
         </Link>
 
-        {/* Previous Artwork Link (Left Center) */}
+        {/* Previous Artwork Link (Left Center) - adjust padding/position */}
         {prevSlug && (
-          <Link 
+          <Link
             href={`/artwork/${prevSlug}`}
-            className="absolute left-4 top-1/2 -translate-y-1/2 bg-gray-700 hover:bg-gray-600 text-white p-2 rounded-full z-10"
+            className="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 bg-gray-700 hover:bg-gray-600 text-white p-1 sm:p-2 rounded-full z-10 font-sans"
             title="Previous Artwork"
           >
             &lt;
           </Link>
         )}
 
-        {/* Next Artwork Link (Right Center) */}
+        {/* Next Artwork Link (Right Center) - adjust padding/position */}
         {nextSlug && (
-          <Link 
+          <Link
             href={`/artwork/${nextSlug}`}
-            className="absolute right-4 top-1/2 -translate-y-1/2 bg-gray-700 hover:bg-gray-600 text-white p-2 rounded-full z-10"
+            className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 bg-gray-700 hover:bg-gray-600 text-white p-1 sm:p-2 rounded-full z-10 font-sans"
             title="Next Artwork"
           >
             &gt;
           </Link>
         )}
 
-        {/* Placard (Bottom Left) */}
-        <div className="absolute bottom-4 left-4 bg-black bg-opacity-60 p-3 rounded max-w-xs z-10">
-          <h2 className="text-lg font-semibold text-white mb-1">{title}</h2>
-          <p className="text-sm text-gray-300">{description}</p>
+        {/* Placard (Bottom Left) - adjust padding, max-width, text size */}
+        <div className="absolute bottom-2 left-2 sm:bottom-4 sm:left-4 bg-black bg-opacity-60 p-2 sm:p-3 rounded max-w-[150px] sm:max-w-xs z-10">
+          <h2 className="text-base sm:text-lg font-semibold text-white mb-1 font-serif">{title}</h2>
+          <p className="text-xs sm:text-sm text-gray-300 font-sans">{description}</p>
         </div>
 
-        {/* Fullscreen Button (Bottom Right) */}
+        {/* Fullscreen Button (Bottom Right) - adjust padding/position/text size */}
         <button
           onClick={handleFullscreen}
-          className="absolute bottom-4 right-4 bg-gray-700 hover:bg-gray-600 text-white px-3 py-1 rounded text-sm z-10"
+          className="absolute bottom-2 right-2 sm:bottom-4 sm:right-4 bg-gray-700 hover:bg-gray-600 text-white px-2 py-1 sm:px-3 sm:py-1 rounded text-xs sm:text-sm z-10 font-sans"
           title="Enter Fullscreen"
         >
           Fullscreen
